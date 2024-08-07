@@ -1,12 +1,12 @@
 #include <iostream>
 #include "Sample.class.hpp"
 
-Sample::Sample(void){
+Sample::Sample(float const f) : pi( f ), qd( 42) {
 
     std::cout << "Constructor called" << std::endl;
     
-    this->foo = 42;
-    std::cout << "this->foo: " << this->foo << std::endl;
+    //this->foo = 42;
+    //std::cout << "this->foo: " << this->foo << std::endl;
 
     this->bar();
     
@@ -19,8 +19,9 @@ Sample::~Sample(void){
     return;
 }
 
-void    Sample::bar( void ) {
+void    Sample::bar( void ) const {
 
-    std::cout << "Member function bar called" << std::endl;
+    std::cout << "this->pi = " << this->pi << std::endl;
+    std::cout << "this->qd = " << this->qd << std::endl;
     return;
 }
