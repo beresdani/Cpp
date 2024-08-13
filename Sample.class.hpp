@@ -12,6 +12,7 @@ public:
     ~Sample( void );
 
     void    bar( void ) const;
+
 };
 
 #endif
